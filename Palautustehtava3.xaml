@@ -1,0 +1,168 @@
+﻿<Window x:Class="Palautustehtava_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Palautustehtava_3"
+        mc:Ignorable="d"
+        Title="Hirsipuupeli" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        KeyDown="KeyPressed"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+
+    <Canvas>
+
+        <!-- DataTriggers in these elements are bound to booleans in the VisibilityBools collection
+             and sets the visibility of the segment to "Hidden"
+             when the value of the boolean is false. -->
+        <Path Fill="Green" Data="M300,415 A150,100 0 0 0 10,415">
+            <Path.Style>
+                <Style TargetType="Path">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding VisibilityBools[0]}" Value="False">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Path.Style>
+        </Path>
+
+        <Line X1="155" Y1="340" X2="155" Y2="100"
+              StrokeThickness="3" Stroke="Black">
+            <Line.Style>
+                <Style TargetType="Line">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding VisibilityBools[1]}" Value="False">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Line.Style>
+        </Line>
+
+        <Line X1="155" Y1="100" X2="400" Y2="100"
+              StrokeThickness="3" Stroke="Black">
+            <Line.Style>
+                <Style TargetType="Line">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding VisibilityBools[2]}" Value="False">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Line.Style>
+        </Line>
+
+        <Line X1="155" Y1="145" X2="200" Y2="100"
+              StrokeThickness="3" Stroke="Black">
+            <Line.Style>
+                <Style TargetType="Line">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding VisibilityBools[3]}" Value="False">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Line.Style>
+        </Line>
+
+        <Line X1="400" Y1="100" X2="400" Y2="120"
+              StrokeThickness="1" Stroke="Black">
+            <Line.Style>
+                <Style TargetType="Line">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding VisibilityBools[4]}" Value="False">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Line.Style>
+        </Line>
+
+        <Ellipse Width="40" Height="40"
+                 StrokeThickness="1" Stroke="Black"
+                 Canvas.Left="380" Canvas.Top="120">
+            <Ellipse.Style>
+                <Style TargetType="Ellipse">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding VisibilityBools[5]}" Value="False">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Ellipse.Style>
+        </Ellipse>
+
+        <Line X1="400" Y1="160" X2="400" Y2="250"
+              StrokeThickness="2" Stroke="Black">
+            <Line.Style>
+                <Style TargetType="Line">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding VisibilityBools[6]}" Value="False">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Line.Style>
+        </Line>
+
+        <Line X1="400" Y1="160" X2="380" Y2="220"
+              StrokeThickness="1" Stroke="Black">
+            <Line.Style>
+                <Style TargetType="Line">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding VisibilityBools[7]}" Value="False">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Line.Style>
+        </Line>
+
+        <Line X1="400" Y1="160" X2="420" Y2="220"
+              StrokeThickness="1" Stroke="Black">
+            <Line.Style>
+                <Style TargetType="Line">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding VisibilityBools[8]}" Value="False">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Line.Style>
+        </Line>
+
+        <Line X1="400" Y1="250" X2="380" Y2="310"
+              StrokeThickness="1" Stroke="Black">
+            <Line.Style>
+                <Style TargetType="Line">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding VisibilityBools[9]}" Value="False">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Line.Style>
+        </Line>
+
+        <Line X1="400" Y1="250" X2="420" Y2="310"
+              StrokeThickness="1" Stroke="Black">
+            <Line.Style>
+                <Style TargetType="Line">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding VisibilityBools[10]}" Value="False">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Line.Style>
+        </Line>
+
+        <!-- Contains the word that player has to guess -->
+        <Label Content="{Binding Word}" FontSize="30"
+               Canvas.Left="525" Canvas.Top="175"/>
+
+    </Canvas>
+    
+</Window>
